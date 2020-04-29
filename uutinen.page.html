@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start" class="ion-padding">
+      <ion-back-button text="Sulje" icon="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>uutinen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <h2> {{ uutinen.otsikko }} </h2>
+    </ion-item>
+    <ion-item>
+      <ion-img [src]="uutinen.kuva" ></ion-img>
+    </ion-item>
+    <ion-item>
+      <p> {{ uutinen.sisalto }} </p>
+    </ion-item>
+    <ion-item>
+      <p>{{ uutinen.pvm }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

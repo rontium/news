@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    
+    <ion-icon (click)="update()" name="refresh-circle" class="ion-padding"></ion-icon>
+
+    <ion-title>
+      Uutiset
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding ion-text">
+
+  <h2 class="ion-padding">Uutiset</h2>
+
+  <ion-list>
+    <ion-item *ngFor="let uutinen of Uutislista.uutiset; let i = index" [routerLink]="'/uutinen/' + i " class="ion-margin">
+      {{ uutinen.otsikko }}
+      ({{ Uutislista.laske(Uutislista.uusiaika, uutinen.aikaleima) }})
+    </ion-item>
+  </ion-list>
+ 
+</ion-content>
